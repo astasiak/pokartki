@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference android:key="fromEnglish" android:title="@string/dir_fromEnglish"
+        android:summary="Use english word as a question"/>
+    <CheckBoxPreference android:key="fromChinese" android:title="@string/dir_fromChinese"
+        android:summary="Use 中文字 as a question"/>
+    <CheckBoxPreference android:key="fromPinyin" android:title="@string/dir_fromPinyin"
+        android:summary="Use Pinyin as a question"/>
+</PreferenceScreen>

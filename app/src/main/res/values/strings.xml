@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pokartki</string>
+
+    <string name="action_sets">Sets</string>
+    <string name="action_directions">Directions</string>
+    <string name="dir_fromEnglish">From english</string>
+    <string name="dir_fromChinese">From chinese</string>
+    <string name="dir_fromPinyin">From Pinyin</string>
+</resources>
