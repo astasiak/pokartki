@@ -6,10 +6,11 @@ public class Question {
     private String pinyin;
     private QuestionDirection direction;
 
-    public Question(String english, String chinese, String pinyin) {
+    public Question(String english, String chinese, String pinyin, QuestionDirection direction) {
         this.english = english;
         this.chinese = chinese;
         this.pinyin = pinyin;
+        this.direction = direction;
     }
 
     public String getEnglish() {

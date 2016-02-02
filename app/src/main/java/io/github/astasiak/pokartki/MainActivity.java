@@ -11,20 +11,24 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import java.io.UnsupportedEncodingException;
 import java.util.HashSet;
 import java.util.Set;
 
+import io.github.astasiak.pokartki.dao.Flashcard;
+import io.github.astasiak.pokartki.dao.FlashcardSetsDao;
+import io.github.astasiak.pokartki.dao.FlashcardsDao;
 import io.github.astasiak.pokartki.engine.Answer;
+import io.github.astasiak.pokartki.engine.DaoQuestionStore;
 import io.github.astasiak.pokartki.engine.Question;
 import io.github.astasiak.pokartki.engine.QuestionDirection;
 import io.github.astasiak.pokartki.engine.QuestionSource;
-import io.github.astasiak.pokartki.engine.mock.MockQuestionSource;
 
 
 public class MainActivity extends ActionBarActivity {
 
     private QuestionSource questionSource;
+    private FlashcardsDao flashcardsDao;
+    private FlashcardSetsDao flashcardSetsDao;
 
     private Button englishButton;
     private Button chineseButton;
@@ -38,16 +42,13 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.questionSource = new MockQuestionSource();
+        this.flashcardsDao = new FlashcardsDao(getApplicationContext());
+        this.flashcardSetsDao = new FlashcardSetsDao(getApplicationContext());
+        insertSampleData(flashcardsDao);
+        this.questionSource = new DaoQuestionStore(flashcardsDao, flashcardSetsDao);
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         configureDirections(settings);
-        settings.registerOnSharedPreferenceChangeListener(new SharedPreferences.OnSharedPreferenceChangeListener() {
-            @Override
-            public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-                configureDirections(sharedPreferences);
-            }
-        });
 
         englishButton = (Button) findViewById(R.id.englishButton);
         chineseButton = (Button) findViewById(R.id.chineseButton);
@@ -58,17 +59,26 @@ public class MainActivity extends ActionBarActivity {
 
         englishButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                englishButton.setText(questionSource.getCurrentQuestion().getEnglish());
+                Question currentQuestion = questionSource.getCurrentQuestion();
+                if(currentQuestion!=null) {
+                    englishButton.setText(currentQuestion.getEnglish());
+                }
             }
         });
         chineseButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                chineseButton.setText(questionSource.getCurrentQuestion().getChinese());
+                Question currentQuestion = questionSource.getCurrentQuestion();
+                if(currentQuestion!=null) {
+                    chineseButton.setText(currentQuestion.getChinese());
+                }
             }
         });
         pinyinButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                pinyinButton.setText(questionSource.getCurrentQuestion().getPinyin());
+                Question currentQuestion = questionSource.getCurrentQuestion();
+                if(currentQuestion!=null) {
+                    pinyinButton.setText(currentQuestion.getPinyin());
+                }
             }
         });
 
@@ -84,19 +94,26 @@ public class MainActivity extends ActionBarActivity {
         }
         button1.setOnClickListener(new OnClickGradeListener(Answer.ANSWER1));
         button2.setOnClickListener(new OnClickGradeListener(Answer.ANSWER2));
-        button3.setOnClickListener(new OnClickGradeListener(Answer.ANSWER2));
+        button3.setOnClickListener(new OnClickGradeListener(Answer.ANSWER3));
 
         Question question = questionSource.getCurrentQuestion();
         presentQuestion(question);
     }
 
     private void presentQuestion(Question question) {
-        String englishText = question.getDirection() == QuestionDirection.FROM_ENGLISH ?
-                question.getEnglish() : "?";
-        String chineseText = question.getDirection() == QuestionDirection.FROM_CHINESE ?
-                question.getChinese() : "?";
-        String pinyinText = question.getDirection() == QuestionDirection.FROM_PINYIN ?
-                question.getPinyin() : "?";
+        String englishText, chineseText, pinyinText;
+        if(question == null) {
+            englishText = "";
+            chineseText = "No cards";
+            pinyinText = "";
+        } else {
+            englishText = question.getDirection() == QuestionDirection.FROM_ENGLISH ?
+                    question.getEnglish() : "?";
+            chineseText = question.getDirection() == QuestionDirection.FROM_CHINESE ?
+                    question.getChinese() : "?";
+            pinyinText = question.getDirection() == QuestionDirection.FROM_PINYIN ?
+                    question.getPinyin() : "?";
+        }
         englishButton.setText(englishText);
         chineseButton.setText(chineseText);
         pinyinButton.setText(pinyinText);
@@ -106,6 +123,9 @@ public class MainActivity extends ActionBarActivity {
     protected void onResume() {
         //showDialog("We're back!", "onRestore invoked");
         super.onResume();
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
+        configureDirections(settings);
+        presentQuestion(questionSource.getCurrentQuestion());
     }
 
     @Override
@@ -149,4 +169,20 @@ public class MainActivity extends ActionBarActivity {
         dialog.show();
     }
 
+    private void insertSampleData(FlashcardsDao flashcardsDao) {
+        flashcardsDao.clear();
+        flashcardsDao.insert(sampleFlashcard("a student", "\u5b66\u751f", "xu\u00e9sheng"));
+        flashcardsDao.insert(sampleFlashcard("a language", "\u8bed\u8a00", "y\u016dy\u00e1n"));
+        flashcardsDao.insert(sampleFlashcard("I'm sorry", "\u5bf9\u4e0d\u8d77", "du\u00ec buq\u012d"));
+        flashcardsDao.insert(sampleFlashcard("Good bye", "\u518d\u89c1", "z\u00e0iji\u00e0n"));
+        flashcardsDao.insert(sampleFlashcard("this", "\u8FD9", "zh\u00e8"));
+    }
+
+    private Flashcard sampleFlashcard(String english, String chinese, String pinyin) {
+        Flashcard card = new Flashcard();
+        card.setEnglish(english);
+        card.setChinese(chinese);
+        card.setPinyin(pinyin);
+        return card;
+    }
 }
