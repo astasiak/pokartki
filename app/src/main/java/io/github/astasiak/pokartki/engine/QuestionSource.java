@@ -6,5 +6,4 @@ public interface QuestionSource {
     Question getCurrentQuestion();
     void setAnswer(Answer answer);
     void configureDirections(Set<QuestionDirection> directions);
-    void configureSets(Set<Long> setIds);
 }

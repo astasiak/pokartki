@@ -4,8 +4,8 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +15,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import io.github.astasiak.pokartki.dao.Flashcard;
+import io.github.astasiak.pokartki.dao.FlashcardSet;
 import io.github.astasiak.pokartki.dao.FlashcardSetsDao;
 import io.github.astasiak.pokartki.dao.FlashcardsDao;
 import io.github.astasiak.pokartki.engine.Answer;
@@ -24,7 +25,7 @@ import io.github.astasiak.pokartki.engine.QuestionDirection;
 import io.github.astasiak.pokartki.engine.QuestionSource;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     private QuestionSource questionSource;
     private FlashcardsDao flashcardsDao;
@@ -44,7 +45,7 @@ public class MainActivity extends ActionBarActivity {
 
         this.flashcardsDao = new FlashcardsDao(getApplicationContext());
         this.flashcardSetsDao = new FlashcardSetsDao(getApplicationContext());
-        insertSampleData(flashcardsDao);
+        insertSampleData(flashcardsDao, flashcardSetsDao);
         this.questionSource = new DaoQuestionStore(flashcardsDao, flashcardSetsDao);
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
@@ -138,7 +139,8 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_sets) {
-            showDialog("Hello world", "How are you?");
+            Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+            startActivity(intent);
             return true;
         }
         if (id == R.id.action_directions) {
@@ -169,20 +171,34 @@ public class MainActivity extends ActionBarActivity {
         dialog.show();
     }
 
-    private void insertSampleData(FlashcardsDao flashcardsDao) {
+    private void insertSampleData(FlashcardsDao flashcardsDao, FlashcardSetsDao flashcardSetsDao) {
         flashcardsDao.clear();
-        flashcardsDao.insert(sampleFlashcard("a student", "\u5b66\u751f", "xu\u00e9sheng"));
-        flashcardsDao.insert(sampleFlashcard("a language", "\u8bed\u8a00", "y\u016dy\u00e1n"));
-        flashcardsDao.insert(sampleFlashcard("I'm sorry", "\u5bf9\u4e0d\u8d77", "du\u00ec buq\u012d"));
-        flashcardsDao.insert(sampleFlashcard("Good bye", "\u518d\u89c1", "z\u00e0iji\u00e0n"));
-        flashcardsDao.insert(sampleFlashcard("this", "\u8FD9", "zh\u00e8"));
+        flashcardsDao.insert(sampleFlashcard(1l, "a student", "\u5b66\u751f", "xu\u00e9sheng"));
+        flashcardsDao.insert(sampleFlashcard(2l, "a language", "\u8bed\u8a00", "y\u016dy\u00e1n"));
+        flashcardsDao.insert(sampleFlashcard(2l, "I'm sorry", "\u5bf9\u4e0d\u8d77", "du\u00ec buq\u012d"));
+        flashcardsDao.insert(sampleFlashcard(2l, "Good bye", "\u518d\u89c1", "z\u00e0iji\u00e0n"));
+        flashcardsDao.insert(sampleFlashcard(3l, "this", "\u8FD9", "zh\u00e8"));
+
+        flashcardSetsDao.clear();
+        flashcardSetsDao.insert(sampleFlashcardSet(1l, "Jeden", true));
+        flashcardSetsDao.insert(sampleFlashcardSet(2l, "Dwa", true));
+        flashcardSetsDao.insert(sampleFlashcardSet(3l, "Trzy", true));
     }
 
-    private Flashcard sampleFlashcard(String english, String chinese, String pinyin) {
+    private Flashcard sampleFlashcard(Long setId, String english, String chinese, String pinyin) {
         Flashcard card = new Flashcard();
+        card.setSetId(setId);
         card.setEnglish(english);
         card.setChinese(chinese);
         card.setPinyin(pinyin);
         return card;
+    }
+
+    private FlashcardSet sampleFlashcardSet(Long id, String name, boolean active) {
+        FlashcardSet set = new FlashcardSet();
+        set.setId(id);
+        set.setName(name);
+        set.setActive(active);
+        return set;
     }
 }

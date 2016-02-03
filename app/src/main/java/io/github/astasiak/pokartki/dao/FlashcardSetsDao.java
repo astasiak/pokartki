@@ -66,6 +66,12 @@ public class FlashcardSetsDao extends SQLiteOpenHelper {
         getWritableDatabase().update(TABLE_NAME, values, "id=" + set.getId(), new String[]{});
     }
 
+    public void setActive(Long id, boolean isActive) {
+        ContentValues values = new ContentValues();
+        values.put("active", isActive);
+        getWritableDatabase().update(TABLE_NAME, values, "id=" + id, new String[]{});
+    }
+
     private FlashcardSet cursor2set(Cursor cursor) {
         Long id = cursor.getLong(0);
         String name = cursor.getString(1);
@@ -81,5 +87,9 @@ public class FlashcardSetsDao extends SQLiteOpenHelper {
         set.setBasePositionPinyin(basePositionPinyin);
         set.setActive(active);
         return set;
+    }
+
+    public void clear() {
+        getWritableDatabase().delete(TABLE_NAME, null, null);
     }
 }

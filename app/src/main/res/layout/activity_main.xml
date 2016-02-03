@@ -51,7 +51,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:textSize="60px"
-            android:background="#033"
+            android:background="#055"
             android:textColor="#fff"
             android:layout_margin="5px"/>
 

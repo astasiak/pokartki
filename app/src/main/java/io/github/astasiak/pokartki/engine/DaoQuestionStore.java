@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.List;
 
 import io.github.astasiak.pokartki.dao.Flashcard;
+import io.github.astasiak.pokartki.dao.FlashcardSet;
 import io.github.astasiak.pokartki.dao.FlashcardsDao;
 import io.github.astasiak.pokartki.dao.FlashcardSetsDao;
 
@@ -14,7 +15,6 @@ public class DaoQuestionStore implements QuestionSource {
     private FlashcardsDao flashcardsDao;
     private FlashcardSetsDao flashcardSetsDao;
     private Set<QuestionDirection> directions = null;
-    private Set<Long> setIds = null;
 
     private PriorityQueue<QuestionEntry> queue = new PriorityQueue<>();
     private double globalBasePosition = 0.0;
@@ -27,15 +27,24 @@ public class DaoQuestionStore implements QuestionSource {
     }
 
     public void init() {
-        if(this.directions==null /*|| this.setIds==null*/) {
+        if(this.directions==null) {
             throw new IllegalStateException("Directions or sets not configured");
         }
         queue.clear();
+        List<FlashcardSet> allSets = flashcardSetsDao.list();
+        Set<Long> activeSetIds = new HashSet<>();
+        for(FlashcardSet set : allSets) {
+            if(set.isActive()) {
+                activeSetIds.add(set.getId());
+            }
+        }
         allFlashcards = flashcardsDao.list();
         for(Flashcard card : allFlashcards) {
-            for(QuestionDirection direction : QuestionDirection.values()) {
-                if(directions.contains(direction)) {
-                    queue.add(new QuestionEntry(card, direction, 0.0));
+            if(activeSetIds.contains(card.getSetId())) {
+                for (QuestionDirection direction : QuestionDirection.values()) {
+                    if (directions.contains(direction)) {
+                        queue.add(new QuestionEntry(card, direction, 0.0));
+                    }
                 }
             }
         }
@@ -62,11 +71,6 @@ public class DaoQuestionStore implements QuestionSource {
     public void configureDirections(Set<QuestionDirection> directions) {
         this.directions = new HashSet<>(directions);
         init();
-    }
-
-    public void configureSets(Set<Long> setIds) {
-        this.setIds = new HashSet<>(setIds);
-        // reload queue
     }
 }
 
