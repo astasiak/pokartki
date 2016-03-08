@@ -100,4 +100,8 @@ public class Flashcard {
     public void setIntervalPinyin(double intervalPinyin) {
         this.intervalPinyin = intervalPinyin;
     }
+
+    public double getAverageInterval() {
+        return (intervalChinese+intervalEnglish+intervalPinyin)/3;
+    }
 }

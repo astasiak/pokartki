@@ -1,4 +1,4 @@
-package io.github.astasiak.pokartki;
+package io.github.astasiak.pokartki.gui;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import android.widget.Button;
 import java.util.HashSet;
 import java.util.Set;
 
+import io.github.astasiak.pokartki.R;
 import io.github.astasiak.pokartki.dao.Flashcard;
 import io.github.astasiak.pokartki.dao.FlashcardSet;
 import io.github.astasiak.pokartki.dao.FlashcardSetsDao;
@@ -191,6 +192,7 @@ public class MainActivity extends AppCompatActivity {
         card.setEnglish(english);
         card.setChinese(chinese);
         card.setPinyin(pinyin);
+        card.setIntervalChinese(3.0);
         return card;
     }
 

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.support.annotation.NonNull;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -25,7 +26,10 @@ public class FlashcardsDao extends SQLiteOpenHelper {
                     "interval_english REAL, " +
                     "interval_chinese REAL, " +
                     "interval_pinyin REAL);";
-
+    private static final String SELECT = "select "+
+            "id, set_id, english, chinese, pinyin, position_english, position_chinese, "+
+            "position_pinyin, interval_english, interval_chinese, interval_pinyin"+
+            " from "+TABLE_NAME;
 
     public FlashcardsDao(Context context) {
         super(context, TABLE_NAME, null, 1);
@@ -40,11 +44,17 @@ public class FlashcardsDao extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) { }
 
     public List<Flashcard> list() {
-        Cursor cursor = getReadableDatabase().rawQuery("select "+
-                "id, set_id, english, chinese, pinyin, position_english, position_chinese, "+
-                "position_pinyin, interval_english, interval_chinese, interval_pinyin"+
-                " from "+TABLE_NAME, new String[]{});
+        Cursor cursor = getReadableDatabase().rawQuery(SELECT, new String[]{});
+        return readListFromCursor(cursor);
+    }
 
+    public List<Flashcard> listBySet(Long setId) {
+        Cursor cursor = getReadableDatabase().rawQuery(SELECT+" WHERE set_id = ?", new String[]{setId.toString()});
+        return readListFromCursor(cursor);
+    }
+
+    @NonNull
+    private List<Flashcard> readListFromCursor(Cursor cursor) {
         List<Flashcard> result = new LinkedList<>();
         while(cursor.moveToNext()) {
             result.add(cursor2card(cursor));

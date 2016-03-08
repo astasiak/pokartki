@@ -1,7 +1,9 @@
-package io.github.astasiak.pokartki;
+package io.github.astasiak.pokartki.gui;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+
+import io.github.astasiak.pokartki.R;
 
 /**
  * Created by Andrzej on 26.01.2016.
