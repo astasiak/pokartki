@@ -16,6 +16,7 @@ public class FlashcardSetsDao extends SQLiteOpenHelper {
             "CREATE TABLE " + TABLE_NAME + " (" +
                     "id INTEGER, " +
                     "name TEXT, " +
+                    "title TEXT, " +
                     "base_position_english REAL, " +
                     "base_position_chinese REAL, " +
                     "base_position_pinyin REAL, " +
@@ -36,7 +37,7 @@ public class FlashcardSetsDao extends SQLiteOpenHelper {
 
     public List<FlashcardSet> list() {
         Cursor cursor = getReadableDatabase().rawQuery("select "+
-                "id, name, base_position_english, base_position_chinese, base_position_pinyin, active"+
+                "id, name, title, base_position_english, base_position_chinese, base_position_pinyin, active"+
                 " from "+TABLE_NAME, new String[]{});
 
         List<FlashcardSet> result = new LinkedList<>();
@@ -50,6 +51,7 @@ public class FlashcardSetsDao extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("id", set.getId());
         values.put("name", set.getName());
+        values.put("title", set.getTitle());
         values.put("base_position_english", set.getBasePositionEnglish());
         values.put("base_position_chinese", set.getBasePositionChinese());
         values.put("base_position_pinyin", set.getBasePositionPinyin());
@@ -75,13 +77,15 @@ public class FlashcardSetsDao extends SQLiteOpenHelper {
     private FlashcardSet cursor2set(Cursor cursor) {
         Long id = cursor.getLong(0);
         String name = cursor.getString(1);
-        Double basePositionEnglish = cursor.getDouble(2);
-        Double basePositionChinese = cursor.getDouble(3);
-        Double basePositionPinyin = cursor.getDouble(4);
-        Boolean active = cursor.getInt(5)>0;
+        String title = cursor.getString(2);
+        Double basePositionEnglish = cursor.getDouble(3);
+        Double basePositionChinese = cursor.getDouble(4);
+        Double basePositionPinyin = cursor.getDouble(5);
+        Boolean active = cursor.getInt(6)>0;
         FlashcardSet set = new FlashcardSet();
         set.setId(id);
         set.setName(name);
+        set.setTitle(title);
         set.setBasePositionEnglish(basePositionEnglish);
         set.setBasePositionChinese(basePositionChinese);
         set.setBasePositionPinyin(basePositionPinyin);

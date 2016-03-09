@@ -3,6 +3,7 @@ package io.github.astasiak.pokartki.dao;
 public class FlashcardSet {
     private Long id;
     private String name;
+    private String title;
     private double basePositionEnglish;
     private double basePositionChinese;
     private double basePositionPinyin;
@@ -22,6 +23,14 @@ public class FlashcardSet {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public double getBasePositionEnglish() {

@@ -1,8 +1,9 @@
 package io.github.astasiak.pokartki.gui;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.content.res.XmlResourceParser;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -123,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        //showDialog("We're back!", "onRestore invoked");
         super.onResume();
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         configureDirections(settings);
@@ -164,43 +167,21 @@ public class MainActivity extends AppCompatActivity {
         questionSource.configureDirections(directions);
     }
 
-    private void showDialog(String title, String text) {
-        AlertDialog dialog = new AlertDialog.Builder(this)
-                .setTitle(title)
-                .setMessage(text)
-                .create();
-        dialog.show();
-    }
-
     private void insertSampleData(FlashcardsDao flashcardsDao, FlashcardSetsDao flashcardSetsDao) {
         flashcardsDao.clear();
-        flashcardsDao.insert(sampleFlashcard(1l, "a student", "\u5b66\u751f", "xu\u00e9sheng"));
-        flashcardsDao.insert(sampleFlashcard(2l, "a language", "\u8bed\u8a00", "y\u016dy\u00e1n"));
-        flashcardsDao.insert(sampleFlashcard(2l, "I'm sorry", "\u5bf9\u4e0d\u8d77", "du\u00ec buq\u012d"));
-        flashcardsDao.insert(sampleFlashcard(2l, "Good bye", "\u518d\u89c1", "z\u00e0iji\u00e0n"));
-        flashcardsDao.insert(sampleFlashcard(3l, "this", "\u8FD9", "zh\u00e8"));
-
-        flashcardSetsDao.clear();
-        flashcardSetsDao.insert(sampleFlashcardSet(1l, "Jeden", true));
-        flashcardSetsDao.insert(sampleFlashcardSet(2l, "Dwa", true));
-        flashcardSetsDao.insert(sampleFlashcardSet(3l, "Trzy", true));
-    }
-
-    private Flashcard sampleFlashcard(Long setId, String english, String chinese, String pinyin) {
-        Flashcard card = new Flashcard();
-        card.setSetId(setId);
-        card.setEnglish(english);
-        card.setChinese(chinese);
-        card.setPinyin(pinyin);
-        card.setIntervalChinese(3.0);
-        return card;
-    }
-
-    private FlashcardSet sampleFlashcardSet(Long id, String name, boolean active) {
-        FlashcardSet set = new FlashcardSet();
-        set.setId(id);
-        set.setName(name);
-        set.setActive(active);
-        return set;
+        XmlResourceParser xml = getResources().getXml(R.xml.data);
+        try {
+            XmlDataParser.Result data = XmlDataParser.parse(xml);
+            flashcardSetsDao.clear();
+            for (FlashcardSet set : data.getSets()) {
+                flashcardSetsDao.insert(set);
+            }
+            flashcardsDao.clear();
+            for (Flashcard card : data.getCards()) {
+                flashcardsDao.insert(card);
+            }
+        } catch (XmlPullParserException | IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -101,7 +101,7 @@ class SetAdapter extends ArrayAdapter<FlashcardSet> {
         }
 
         holder.name.setText(set.getName());
-        holder.description.setText(set.getId().toString());
+        holder.description.setText(set.getTitle());
         holder.checkbox.setChecked(set.isActive());
         holder.checkbox.setTag(set);
         return convertView;

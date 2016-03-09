@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database>
+    <set name="Unit 1" title="How do you do?">
+        <flashcard>
+            <english>you</english>
+            <chinese>你</chinese>
+            <pinyin></pinyin>
+        </flashcard>
+        <flashcard>
+            <english>good, well, fine, OK</english>
+            <chinese>好</chinese>
+            <pinyin>nǐ​hǎo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Lù Yǔpíng</english>
+            <chinese>陆雨平</chinese>
+            <pinyin>Lù Yǔpíng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Lì​bō</english>
+            <chinese>力波</chinese>
+            <pinyin>Lì​bō</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(yes-no question)</english>
+            <chinese>吗</chinese>
+            <pinyin>ma</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>I, me</english>
+            <chinese>我</chinese>
+            <pinyin>wǒ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>very</english>
+            <chinese>很</chinese>
+            <pinyin>hěn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(elliptical question)</english>
+            <chinese>呢</chinese>
+            <pinyin>ne</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>too, also</english>
+            <chinese>也</chinese>
+            <pinyin>yě</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Lín Nà</english>
+            <chinese>林娜</chinese>
+            <pinyin>Lín Nà</pinyin>
+        </flashcard>
+    </set>
+    <set name="Unit 2" title="Are you busy?">
+        <flashcard>
+            <english>I'm sorry</english>
+            <chinese>对不起</chinese>
+            <pinyin>duì buqĭ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Good bye</english>
+            <chinese>再见</chinese>
+            <pinyin>zàijiàn</pinyin>
+        </flashcard>
+    </set>
+    <set name="Unit 3" title="Which country does she come from?">
+        <flashcard>
+            <english>this</english>
+            <chinese>这</chinese>
+            <pinyin>zhè</pinyin>
+        </flashcard>
+    </set>
+</database>
