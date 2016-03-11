@@ -42,30 +42,30 @@ public class XmlDataParser {
                     currentFlashcard = new Flashcard();
                     currentFlashcard.setId(currentCardId);
                     currentFlashcard.setSetId(currentSetId);
-                    currentFlashcard.setIntervalChinese(1.0);
-                    currentFlashcard.setIntervalEnglish(1.0);
-                    currentFlashcard.setIntervalPinyin(1.0);
+                    currentFlashcard.getEnglish().setInterval(1.0);
+                    currentFlashcard.getPinyin().setInterval(1.0);
+                    currentFlashcard.getChinese().setInterval(1.0);
                     result.getCards().add(currentFlashcard);
                 }
                 if("english".equals(xml.getName())) {
                     eventType = xml.next();
                     if(eventType == XmlPullParser.TEXT) {
                         String english = xml.getText();
-                        currentFlashcard.setEnglish(english);
+                        currentFlashcard.getEnglish().setWord(english);
                     }
                 }
                 if("chinese".equals(xml.getName())) {
                     eventType = xml.next();
                     if(eventType == XmlPullParser.TEXT) {
                         String chinese = xml.getText();
-                        currentFlashcard.setChinese(chinese);
+                        currentFlashcard.getChinese().setWord(chinese);
                     }
                 }
                 if("pinyin".equals(xml.getName())) {
                     eventType = xml.next();
                     if(eventType == XmlPullParser.TEXT) {
                         String pinyin = xml.getText();
-                        currentFlashcard.setPinyin(pinyin);
+                        currentFlashcard.getPinyin().setWord(pinyin);
                     }
                 }
             }

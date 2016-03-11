@@ -3,15 +3,9 @@ package io.github.astasiak.pokartki.dao;
 public class Flashcard {
     private Long id;
     private Long setId;
-    private String english;
-    private String chinese;
-    private String pinyin;
-    private double positionEnglish;
-    private double positionChinese;
-    private double positionPinyin;
-    private double intervalEnglish;
-    private double intervalChinese;
-    private double intervalPinyin;
+    private Parameters english = new Parameters();
+    private Parameters chinese = new Parameters();
+    private Parameters pinyin = new Parameters();
 
     public Long getId() {
         return id;
@@ -29,79 +23,49 @@ public class Flashcard {
         this.setId = setId;
     }
 
-    public String getEnglish() {
-        return english;
+    public double getAverageInterval() {
+        return (chinese.getInterval()+english.getInterval()+pinyin.getInterval())/3;
     }
 
-    public void setEnglish(String english) {
-        this.english = english;
-    }
-
-    public String getChinese() {
+    public Parameters getChinese() {
         return chinese;
     }
 
-    public void setChinese(String chinese) {
-        this.chinese = chinese;
-    }
-
-    public String getPinyin() {
+    public Parameters getPinyin() {
         return pinyin;
     }
 
-    public void setPinyin(String pinyin) {
-        this.pinyin = pinyin;
+    public Parameters getEnglish() {
+        return english;
     }
 
-    public double getPositionEnglish() {
-        return positionEnglish;
-    }
+    public static class Parameters {
+        private String word;
+        private double position;
+        private double interval;
 
-    public void setPositionEnglish(double positionEnglish) {
-        this.positionEnglish = positionEnglish;
-    }
+        public String getWord() {
+            return word;
+        }
 
-    public double getPositionChinese() {
-        return positionChinese;
-    }
+        public void setWord(String word) {
+            this.word = word;
+        }
 
-    public void setPositionChinese(double positionChinese) {
-        this.positionChinese = positionChinese;
-    }
+        public double getPosition() {
+            return position;
+        }
 
-    public double getPositionPinyin() {
-        return positionPinyin;
-    }
+        public void setPosition(double position) {
+            this.position = position;
+        }
 
-    public void setPositionPinyin(double positionPinyin) {
-        this.positionPinyin = positionPinyin;
-    }
+        public double getInterval() {
+            return interval;
+        }
 
-    public double getIntervalEnglish() {
-        return intervalEnglish;
-    }
-
-    public void setIntervalEnglish(double intervalEnglish) {
-        this.intervalEnglish = intervalEnglish;
-    }
-
-    public double getIntervalChinese() {
-        return intervalChinese;
-    }
-
-    public void setIntervalChinese(double intervalChinese) {
-        this.intervalChinese = intervalChinese;
-    }
-
-    public double getIntervalPinyin() {
-        return intervalPinyin;
-    }
-
-    public void setIntervalPinyin(double intervalPinyin) {
-        this.intervalPinyin = intervalPinyin;
-    }
-
-    public double getAverageInterval() {
-        return (intervalChinese+intervalEnglish+intervalPinyin)/3;
+        public void setInterval(double interval) {
+            this.interval = interval;
+        }
     }
 }

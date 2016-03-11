@@ -60,28 +60,19 @@ class SetAdapter extends ArrayAdapter<FlashcardSet> {
         this.activity = activity;
     }
 
-    private static class SetHolder {
-        public TextView name;
-        public TextView description;
-        public CheckBox checkbox;
-        public RelativeLayout wholeItem;
-    }
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        SetHolder holder = null;
 
         final FlashcardSet set = list.get(position);
         if(convertView==null) {
             LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = vi.inflate(R.layout.set_item, null);
 
-            holder = new SetHolder();
-            holder.name = (TextView) convertView.findViewById(R.id.set_name);
-            holder.description = (TextView) convertView.findViewById(R.id.set_info);
-            holder.checkbox = (CheckBox) convertView.findViewById(R.id.set_checkbox);
-            holder.wholeItem = (RelativeLayout) convertView.findViewById(R.id.set_item_layout);
-            holder.wholeItem.setOnClickListener(new View.OnClickListener() {
+            TextView name = (TextView) convertView.findViewById(R.id.set_name);
+            TextView description = (TextView) convertView.findViewById(R.id.set_info);
+            CheckBox checkbox = (CheckBox) convertView.findViewById(R.id.set_checkbox);
+            RelativeLayout wholeItem = (RelativeLayout) convertView.findViewById(R.id.set_item_layout);
+            wholeItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(activity, SetActivity.class);
@@ -89,21 +80,19 @@ class SetAdapter extends ArrayAdapter<FlashcardSet> {
                     activity.startActivity(intent);
                 }
             });
-            convertView.setTag(holder);
+            name.setText(set.getName());
+            description.setText(set.getTitle());
+            checkbox.setChecked(set.isActive());
+            checkbox.setTag(set);
 
-            holder.checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    System.out.println("checkbox listener!");
                     setsDao.setActive(set.getId(), isChecked);
                 }
             });
-        } else {
-            holder = (SetHolder) convertView.getTag();
         }
 
-        holder.name.setText(set.getName());
-        holder.description.setText(set.getTitle());
-        holder.checkbox.setChecked(set.isActive());
-        holder.checkbox.setTag(set);
         return convertView;
     }
 }

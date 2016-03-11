@@ -53,11 +53,19 @@ public class FlashcardsDao extends SQLiteOpenHelper {
         return readListFromCursor(cursor);
     }
 
+    public Flashcard get(Long cardId) {
+        Cursor cursor = getReadableDatabase().rawQuery(SELECT+" WHERE id = ?", new String[]{cardId.toString()});
+        if(!cursor.moveToNext()) {
+            return null;
+        }
+        return readCardFromCursor(cursor);
+    }
+
     @NonNull
     private List<Flashcard> readListFromCursor(Cursor cursor) {
         List<Flashcard> result = new LinkedList<>();
         while(cursor.moveToNext()) {
-            result.add(cursor2card(cursor));
+            result.add(readCardFromCursor(cursor));
         }
         return result;
     }
@@ -66,30 +74,33 @@ public class FlashcardsDao extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("id", flashcard.getId());
         values.put("set_id", flashcard.getSetId());
-        values.put("english", flashcard.getEnglish());
-        values.put("chinese", flashcard.getChinese());
-        values.put("pinyin", flashcard.getPinyin());
-        values.put("position_english", flashcard.getPositionEnglish());
-        values.put("position_chinese", flashcard.getPositionChinese());
-        values.put("position_pinyin", flashcard.getPositionPinyin());
-        values.put("interval_english", flashcard.getIntervalEnglish());
-        values.put("interval_chinese", flashcard.getIntervalChinese());
-        values.put("interval_pinyin", flashcard.getIntervalPinyin());
+        values.put("english", flashcard.getEnglish().getWord());
+        values.put("chinese", flashcard.getChinese().getWord());
+        values.put("pinyin", flashcard.getPinyin().getWord());
+        values.put("position_english", flashcard.getEnglish().getPosition());
+        values.put("position_chinese", flashcard.getChinese().getPosition());
+        values.put("position_pinyin", flashcard.getPinyin().getPosition());
+        values.put("interval_english", flashcard.getEnglish().getInterval());
+        values.put("interval_chinese", flashcard.getChinese().getInterval());
+        values.put("interval_pinyin", flashcard.getPinyin().getInterval());
         getWritableDatabase().insert(TABLE_NAME, null, values);
     }
 
     public void save(Flashcard flashcard) {
         ContentValues values = new ContentValues();
-        values.put("position_english", flashcard.getPositionEnglish());
-        values.put("position_chinese", flashcard.getPositionChinese());
-        values.put("position_pinyin", flashcard.getPositionPinyin());
-        values.put("interval_english", flashcard.getIntervalEnglish());
-        values.put("interval_chinese", flashcard.getIntervalChinese());
-        values.put("interval_pinyin", flashcard.getIntervalPinyin());
+        values.put("position_english", flashcard.getEnglish().getPosition());
+        values.put("position_chinese", flashcard.getChinese().getPosition());
+        values.put("position_pinyin", flashcard.getPinyin().getPosition());
+        values.put("interval_english", flashcard.getEnglish().getInterval());
+        values.put("interval_chinese", flashcard.getChinese().getInterval());
+        values.put("interval_pinyin", flashcard.getPinyin().getInterval());
         getWritableDatabase().update(TABLE_NAME, values, "id=" + flashcard.getId(), new String[]{});
     }
 
-    private Flashcard cursor2card(Cursor cursor) {
+    private Flashcard readCardFromCursor(Cursor cursor) {
+        if(cursor.isClosed()) {
+            return null;
+        }
         Long id = cursor.getLong(0);
         Long setId = cursor.getLong(1);
         String english = cursor.getString(2);
@@ -104,15 +115,15 @@ public class FlashcardsDao extends SQLiteOpenHelper {
         Flashcard card = new Flashcard();
         card.setId(id);
         card.setSetId(setId);
-        card.setEnglish(english);
-        card.setChinese(chinese);
-        card.setPinyin(pinyin);
-        card.setPositionEnglish(positionEnglish);
-        card.setPositionChinese(positionChinese);
-        card.setPositionPinyin(positionPinyin);
-        card.setIntervalEnglish(intervalEnglish);
-        card.setIntervalChinese(intervalChinese);
-        card.setIntervalPinyin(intervalPinyin);
+        card.getEnglish().setWord(english);
+        card.getChinese().setWord(chinese);
+        card.getPinyin().setWord(pinyin);
+        card.getEnglish().setPosition(positionEnglish);
+        card.getChinese().setPosition(positionChinese);
+        card.getPinyin().setPosition(positionPinyin);
+        card.getEnglish().setInterval(intervalEnglish);
+        card.getChinese().setInterval(intervalChinese);
+        card.getPinyin().setInterval(intervalPinyin);
         return card;
     }
 

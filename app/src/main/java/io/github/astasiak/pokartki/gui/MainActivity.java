@@ -2,7 +2,6 @@ package io.github.astasiak.pokartki.gui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
@@ -169,10 +168,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void insertSampleData(FlashcardsDao flashcardsDao, FlashcardSetsDao flashcardSetsDao) {
         flashcardsDao.clear();
+        flashcardSetsDao.clear();
         XmlResourceParser xml = getResources().getXml(R.xml.data);
         try {
             XmlDataParser.Result data = XmlDataParser.parse(xml);
-            flashcardSetsDao.clear();
             for (FlashcardSet set : data.getSets()) {
                 flashcardSetsDao.insert(set);
             }

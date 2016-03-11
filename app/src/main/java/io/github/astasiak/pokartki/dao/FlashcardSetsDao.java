@@ -55,22 +55,24 @@ public class FlashcardSetsDao extends SQLiteOpenHelper {
         values.put("base_position_english", set.getBasePositionEnglish());
         values.put("base_position_chinese", set.getBasePositionChinese());
         values.put("base_position_pinyin", set.getBasePositionPinyin());
-        values.put("active", set.isActive());
+        values.put("active", set.isActive() ? 1 : 0);
         getWritableDatabase().insert(TABLE_NAME, null, values);
     }
 
     public void save(FlashcardSet set) {
+        System.out.println("Saving set " + set.getId() + " with active = " + set.isActive());
         ContentValues values = new ContentValues();
         values.put("base_position_english", set.getBasePositionEnglish());
         values.put("base_position_chinese", set.getBasePositionChinese());
         values.put("base_position_pinyin", set.getBasePositionPinyin());
-        values.put("active", set.isActive());
+        values.put("active", set.isActive() ? 1 : 0);
         getWritableDatabase().update(TABLE_NAME, values, "id=" + set.getId(), new String[]{});
     }
 
     public void setActive(Long id, boolean isActive) {
+        System.out.println("Setting set "+id+" active to "+isActive);
         ContentValues values = new ContentValues();
-        values.put("active", isActive);
+        values.put("active", isActive ? 1 : 0);
         getWritableDatabase().update(TABLE_NAME, values, "id=" + id, new String[]{});
     }
 

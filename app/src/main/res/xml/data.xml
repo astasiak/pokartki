@@ -4,12 +4,12 @@
         <flashcard>
             <english>you</english>
             <chinese>你</chinese>
-            <pinyin></pinyin>
+            <pinyin>nǐ​</pinyin>
         </flashcard>
         <flashcard>
             <english>good, well, fine, OK</english>
             <chinese>好</chinese>
-            <pinyin>nǐ​hǎo</pinyin>
+            <pinyin>hǎo</pinyin>
         </flashcard>
         <flashcard>
             <english>Lù Yǔpíng</english>
@@ -54,6 +54,165 @@
     </set>
     <set name="Unit 2" title="Are you busy?">
         <flashcard>
+            <english>busy</english>
+            <chinese>忙</chinese>
+            <pinyin>máng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>dad</english>
+            <chinese>巴巴</chinese>
+            <pinyin>bābā</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>mom</english>
+            <chinese>妈妈</chinese>
+            <pinyin>māma</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>they</english>
+            <chinese>他们</chinese>
+            <pinyin>tāmen</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>both</english>
+            <chinese>都</chinese>
+            <pinyin>dōu</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>not, no</english>
+            <chinese>不</chinese>
+            <pinyin>bù</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>male</english>
+            <chinese>男</chinese>
+            <pinyin>nán</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>friend</english>
+            <chinese>朋友</chinese>
+            <pinyin>péngyou</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>elder brother</english>
+            <chinese>哥哥</chinese>
+            <pinyin>gēge</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to want</english>
+            <chinese>要</chinese>
+            <pinyin>yào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>coffee</english>
+            <chinese>咖啡</chinese>
+            <pinyin>kāfēi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>younger brother</english>
+            <chinese>弟弟</chinese>
+            <pinyin>dìdi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>we, us</english>
+            <chinese>我们</chinese>
+            <pinyin>wǒmen</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to drink</english>
+            <chinese>喝</chinese>
+            <pinyin>hē</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Dīng</english>
+            <chinese>丁</chinese>
+            <pinyin>Dīng</pinyin>
+        </flashcard>
+    </set>
+    <set name="Unit 3" title="Which country does she come from?">
+        <flashcard>
+            <english>she, her</english>
+            <chinese>她</chinese>
+            <pinyin>tā</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to be</english>
+            <chinese>是</chinese>
+            <pinyin>shì</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>which</english>
+            <chinese>哪</chinese>
+            <pinyin>nǎ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>country, nation</english>
+            <chinese>国</chinese>
+            <pinyin>guó</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>people, person</english>
+            <chinese>人</chinese>
+            <pinyin>rén</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>that</english>
+            <chinese>那</chinese>
+            <pinyin>nǎ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>who, whom</english>
+            <chinese>谁</chinese>
+            <pinyin>shéi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>teacher</english>
+            <chinese>老师</chinese>
+            <pinyin>lǎoshī</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>China</english>
+            <chinese>中国</chinese>
+            <pinyin>Zhōngguó</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>you (polite)</english>
+            <chinese>您</chinese>
+            <pinyin>nín</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>this</english>
+            <chinese>这</chinese>
+            <pinyin>zhè</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>foreign language</english>
+            <chinese>外语</chinese>
+            <pinyin>wàiyǔ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>doctor, physician</english>
+            <chinese>医生</chinese>
+            <pinyin>yīshēng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(parental) grandmother</english>
+            <chinese>奶奶</chinese>
+            <pinyin>nǎinai</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(maternal) grandmother</english>
+            <chinese>外婆</chinese>
+            <pinyin>wàipó</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Chén</english>
+            <chinese>陈</chinese>
+            <pinyin>Chén</pinyin>
+        </flashcard>
+    </set>
+    <set name="Unit 4" title="Other">
+        <flashcard>
             <english>I'm sorry</english>
             <chinese>对不起</chinese>
             <pinyin>duì buqĭ</pinyin>
@@ -63,8 +222,6 @@
             <chinese>再见</chinese>
             <pinyin>zàijiàn</pinyin>
         </flashcard>
-    </set>
-    <set name="Unit 3" title="Which country does she come from?">
         <flashcard>
             <english>this</english>
             <chinese>这</chinese>
