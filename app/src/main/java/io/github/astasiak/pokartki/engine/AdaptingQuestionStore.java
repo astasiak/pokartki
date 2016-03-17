@@ -3,17 +3,17 @@ package io.github.astasiak.pokartki.engine;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Set;
-import java.util.List;
 
 import io.github.astasiak.pokartki.dao.Flashcard;
 import io.github.astasiak.pokartki.dao.FlashcardSet;
-import io.github.astasiak.pokartki.dao.FlashcardsDao;
 import io.github.astasiak.pokartki.dao.FlashcardSetsDao;
+import io.github.astasiak.pokartki.dao.FlashcardsDao;
 
-public class DaoQuestionStore implements QuestionSource {
+public class AdaptingQuestionStore implements QuestionSource {
     private FlashcardsDao flashcardsDao;
     private FlashcardSetsDao flashcardSetsDao;
     private Set<QuestionDirection> directions = null;
@@ -26,7 +26,7 @@ public class DaoQuestionStore implements QuestionSource {
     private double previousRelative;
 
 
-    public DaoQuestionStore(FlashcardsDao flashcardsDao, FlashcardSetsDao flashcardSetsDao) {
+    public AdaptingQuestionStore(FlashcardsDao flashcardsDao, FlashcardSetsDao flashcardSetsDao) {
         this.flashcardsDao = flashcardsDao;
         this.flashcardSetsDao = flashcardSetsDao;
     }
@@ -50,13 +50,11 @@ public class DaoQuestionStore implements QuestionSource {
         allFlashcards = flashcardsDao.list();
         for(Flashcard card : allFlashcards) {
             if(activeSetIds.contains(card.getSetId())) {
-                for (QuestionDirection direction : QuestionDirection.values()) {
-                    if (directions.contains(direction)) {
-                        Flashcard.Parameters parameters = getParameters(card, direction);
-                        Double setBeginning = beginnings.get(new SetWithDirection(card.getSetId(), direction));
-                        double relativePosition = parameters.getPosition() - setBeginning;
-                        queue.add(new QuestionEntry(card, direction, relativePosition));
-                    }
+                for (QuestionDirection direction : directions) {
+                    Flashcard.Parameters parameters = getParameters(card, direction);
+                    Double setBeginning = beginnings.get(new SetWithDirection(card.getSetId(), direction));
+                    double relativePosition = parameters.getPosition() - setBeginning;
+                    queue.add(new QuestionEntry(card, direction, relativePosition));
                 }
             }
         }

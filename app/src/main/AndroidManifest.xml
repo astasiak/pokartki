@@ -21,6 +21,7 @@
         <activity android:name=".gui.SetsActivity"/>
         <activity android:name=".gui.SetActivity"/>
         <activity android:name=".gui.CardActivity"/>
+        <activity android:name=".gui.OptionsActivity"/>
     </application>
 
 </manifest>

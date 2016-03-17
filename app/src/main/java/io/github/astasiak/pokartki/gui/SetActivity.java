@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
@@ -66,43 +65,44 @@ class CardAdapter extends ArrayAdapter<Flashcard> {
         this.activity = activity;
     }
 
-    private static class SetHolder {
+    private static class CardHolder {
         public TextView english;
         public TextView chinese;
         public TextView parameters;
+        public LinearLayout layout;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        SetHolder holder = null;
+        CardHolder holder = null;
 
         final Flashcard card = list.get(position);
         if(convertView==null) {
             LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = vi.inflate(R.layout.card_item, null);
 
-            holder = new SetHolder();
+            holder = new CardHolder();
             holder.chinese = (TextView) convertView.findViewById(R.id.card_chinese);
             holder.english = (TextView) convertView.findViewById(R.id.card_english);
             holder.parameters = (TextView) convertView.findViewById(R.id.card_params);
+            holder.layout = (LinearLayout) convertView.findViewById(R.id.card_item_layout);
             convertView.setTag(holder);
-            LinearLayout wholeItem = (LinearLayout) convertView.findViewById(R.id.card_item_layout);
-            wholeItem.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(activity, CardActivity.class);
-                    intent.putExtra("cardId", card.getId());
-                    activity.startActivity(intent);
-                }
-            });
         } else {
-            holder = (SetHolder) convertView.getTag();
+            holder = (CardHolder) convertView.getTag();
         }
 
         holder.english.setText(card.getEnglish().getWord());
         holder.chinese.setText(card.getChinese().getWord());
         DecimalFormat format = new DecimalFormat("0.00");
         holder.parameters.setText(format.format(card.getAverageInterval()));
+        holder.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity, CardActivity.class);
+                intent.putExtra("cardId", card.getId());
+                activity.startActivity(intent);
+            }
+        });
         return convertView;
     }
 }

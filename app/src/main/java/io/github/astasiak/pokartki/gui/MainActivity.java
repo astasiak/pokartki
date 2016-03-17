@@ -22,8 +22,9 @@ import io.github.astasiak.pokartki.dao.Flashcard;
 import io.github.astasiak.pokartki.dao.FlashcardSet;
 import io.github.astasiak.pokartki.dao.FlashcardSetsDao;
 import io.github.astasiak.pokartki.dao.FlashcardsDao;
+import io.github.astasiak.pokartki.engine.AdaptingQuestionStore;
 import io.github.astasiak.pokartki.engine.Answer;
-import io.github.astasiak.pokartki.engine.DaoQuestionStore;
+import io.github.astasiak.pokartki.engine.RandomQuestionStore;
 import io.github.astasiak.pokartki.engine.Question;
 import io.github.astasiak.pokartki.engine.QuestionDirection;
 import io.github.astasiak.pokartki.engine.QuestionSource;
@@ -50,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         this.flashcardsDao = new FlashcardsDao(getApplicationContext());
         this.flashcardSetsDao = new FlashcardSetsDao(getApplicationContext());
         insertSampleData(flashcardsDao, flashcardSetsDao);
-        this.questionSource = new DaoQuestionStore(flashcardsDao, flashcardSetsDao);
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         configureDirections(settings);
@@ -151,11 +151,22 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        if (id == R.id.action_options) {
+            Intent intent = new Intent(MainActivity.this, OptionsActivity.class);
+            startActivity(intent);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
 
     private void configureDirections(SharedPreferences settings) {
+        boolean randomQuestions = settings.getBoolean("randomQuestions", false);
+        if(randomQuestions) {
+            this.questionSource = new RandomQuestionStore(flashcardsDao, flashcardSetsDao);
+        } else {
+            this.questionSource = new AdaptingQuestionStore(flashcardsDao, flashcardSetsDao);
+        }
         boolean fromEnglish = settings.getBoolean("fromEnglish", true);
         boolean fromChinese = settings.getBoolean("fromChinese", true);
         boolean fromPinyin = settings.getBoolean("fromPinyin", true);

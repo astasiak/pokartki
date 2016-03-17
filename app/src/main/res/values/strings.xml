@@ -3,7 +3,11 @@
 
     <string name="action_sets">Sets</string>
     <string name="action_directions">Directions</string>
+    <string name="action_options">Options</string>
+
     <string name="dir_fromEnglish">From english</string>
     <string name="dir_fromChinese">From chinese</string>
     <string name="dir_fromPinyin">From Pinyin</string>
+
+    <string name="opt_randomQuestions">Just ask randomly</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <database>
-    <set name="Unit 1" title="How do you do?">
+    <set name="Lesson 1" title="How do you do?">
         <flashcard>
             <english>you</english>
             <chinese>你</chinese>
@@ -52,7 +52,7 @@
             <pinyin>Lín Nà</pinyin>
         </flashcard>
     </set>
-    <set name="Unit 2" title="Are you busy?">
+    <set name="Lesson 2" title="Are you busy?">
         <flashcard>
             <english>busy</english>
             <chinese>忙</chinese>
@@ -129,7 +129,7 @@
             <pinyin>Dīng</pinyin>
         </flashcard>
     </set>
-    <set name="Unit 3" title="Which country does she come from?">
+    <set name="Lesson 3" title="Which country does she come from?">
         <flashcard>
             <english>she, her</english>
             <chinese>她</chinese>
@@ -211,21 +211,1727 @@
             <pinyin>Chén</pinyin>
         </flashcard>
     </set>
-    <set name="Unit 4" title="Other">
+    <set name="Lesson 4" title="Nice to meet you!">
+        <flashcard>
+            <english>to know (somebody)</english>
+            <chinese>认识</chinese>
+            <pinyin>rènshi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>happy, pleased</english>
+            <chinese>高兴</chinese>
+            <pinyin>gāoxìng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>tall</english>
+            <chinese>高</chinese>
+            <pinyin>gāo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>may</english>
+            <chinese>可以</chinese>
+            <pinyin>kěyǐ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to come in</english>
+            <chinese>进来</chinese>
+            <pinyin>jìnlai</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to enter</english>
+            <chinese>进</chinese>
+            <pinyin>jìn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to come</english>
+            <chinese>来</chinese>
+            <pinyin>lái</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>please</english>
+            <chinese>请</chinese>
+            <pinyin>qǐng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>reporter</english>
+            <chinese>记者</chinese>
+            <pinyin>jìzhě</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>May I ask...?</english>
+            <chinese>请问</chinese>
+            <pinyin>qǐngwèn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to ask</english>
+            <chinese>问</chinese>
+            <pinyin>wèn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>your surname (polite)</english>
+            <chinese>贵姓</chinese>
+            <pinyin>guìxìng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>one's surname is...</english>
+            <chinese>姓</chinese>
+            <pinyin>xìng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to be called</english>
+            <chinese>叫</chinese>
+            <pinyin>jiào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Mr., sir</english>
+            <chinese>先生</chinese>
+            <pinyin>xiānsheng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Yáng</english>
+            <chinese>杨</chinese>
+            <pinyin>Yáng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>language</english>
+            <chinese>语言</chinese>
+            <pinyin>yǔyán</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>institute, college</english>
+            <chinese>学院</chinese>
+            <pinyin>xuéyuàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to learn, to study</english>
+            <chinese>学</chinese>
+            <pinyin>xué</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(possesive particle)</english>
+            <chinese>的</chinese>
+            <pinyin>de</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>student</english>
+            <chinese>学生</chinese>
+            <pinyin>xuésheng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>what</english>
+            <chinese>什么</chinese>
+            <pinyin>shénme</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to learn, to study</english>
+            <chinese>学习</chinese>
+            <pinyin>xuéxí</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Chinese (language)</english>
+            <chinese>汉语</chinese>
+            <pinyin>Hànyǔ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Great Britain, England</english>
+            <chinese>英国</chinese>
+            <pinyin>Yīngguó</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Mǎ Dàwéi</english>
+            <chinese>马大为</chinese>
+            <pinyin>Mǎ Dàwéi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Canada</english>
+            <chinese>加拿大</chinese>
+            <pinyin>Jiānádà</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>USA</english>
+            <chinese>美国</chinese>
+            <pinyin>Měiguó</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>France</english>
+            <chinese>法国</chinese>
+            <pinyin>Fǎguó</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Germany</english>
+            <chinese>德国</chinese>
+            <pinyin>Déguó</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Russia</english>
+            <chinese>俄罗斯</chinese>
+            <pinyin>Éluósī</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Japan</english>
+            <chinese>日本</chinese>
+            <pinyin>Rìběn</pinyin>
+        </flashcard>
+    </set>
+    <set name="Lesson 5" title="Where is the dining hall?">
+        <flashcard>
+            <english>dining hall</english>
+            <chinese>餐厅</chinese>
+            <pinyin>cāntīng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to be (there)</english>
+            <chinese>在</chinese>
+            <pinyin>zài</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>where</english>
+            <chinese>那儿</chinese>
+            <pinyin>nàr</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>dormitory</english>
+            <chinese>宿舍</chinese>
+            <pinyin>sùshè</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>female</english>
+            <chinese>女</chinese>
+            <pinyin>nǚ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to sit</english>
+            <chinese>坐</chinese>
+            <pinyin>zuò</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to thank</english>
+            <chinese>谢谢</chinese>
+            <pinyin>xièxie</pinyin>
+        </flashcard>
         <flashcard>
             <english>I'm sorry</english>
             <chinese>对不起</chinese>
-            <pinyin>duì buqĭ</pinyin>
+            <pinyin>duìbuqǐ</pinyin>
         </flashcard>
         <flashcard>
-            <english>Good bye</english>
+            <english>to know</english>
+            <chinese>知道</chinese>
+            <pinyin>zhīdào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>never mind</english>
+            <chinese>没关系</chinese>
+            <pinyin>méiguānxi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>goodbye</english>
             <chinese>再见</chinese>
             <pinyin>zàijiàn</pinyin>
         </flashcard>
         <flashcard>
-            <english>this</english>
-            <chinese>这</chinese>
-            <pinyin>zhè</pinyin>
+            <english>again</english>
+            <chinese>再</chinese>
+            <pinyin>zài</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Wáng Xiǎoyún</english>
+            <chinese>王小云</chinese>
+            <pinyin>Wáng Xiǎoyún</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>miss, young lady</english>
+            <chinese>小姐</chinese>
+            <pinyin>xiǎojie</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>story, floor</english>
+            <chinese>层</chinese>
+            <pinyin>céng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(ordinal number)</english>
+            <chinese>号</chinese>
+            <pinyin>hào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>need not</english>
+            <chinese>不用</chinese>
+            <pinyin>búyòng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>here</english>
+            <chinese>这儿</chinese>
+            <pinyin>zhèr</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>late</english>
+            <chinese>晚</chinese>
+            <pinyin>wǎn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(aspect particle, past)</english>
+            <chinese>了</chinese>
+            <pinyin>le</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Sòng Huá</english>
+            <chinese>宋华</chinese>
+            <pinyin>Sòng Huá</pinyin>
+        </flashcard>
+    </set>
+    <set name="Lesson 6" title="Let's go swimming, shall we?">
+        <flashcard>
+            <english>to go</english>
+            <chinese>去</chinese>
+            <pinyin>qù</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to swim</english>
+            <chinese>游泳</chinese>
+            <pinyin>yóuyǒng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>yesterday</english>
+            <chinese>昨天</chinese>
+            <pinyin>zuótiān</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Beijing opera</english>
+            <chinese>京剧</chinese>
+            <pinyin>jīngjù</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>how is...</english>
+            <chinese>怎么样</chinese>
+            <pinyin>zěnmeyàng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>interesting</english>
+            <chinese>有意思</chinese>
+            <pinyin>yǒu yìsi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>today</english>
+            <chinese>今天</chinese>
+            <pinyin>jīntiān</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>day</english>
+            <chinese>天</chinese>
+            <pinyin>tiān</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>weather</english>
+            <chinese>天气</chinese>
+            <pinyin>tiānqì</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>too, extremely</english>
+            <chinese>太</chinese>
+            <pinyin>tài</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>time, moment</english>
+            <chinese>时候</chinese>
+            <pinyin>shíhou</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>now</english>
+            <chinese>现在</chinese>
+            <pinyin>xiànzài</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>tomorrow</english>
+            <chinese>明天</chinese>
+            <pinyin>míngtiān</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to have</english>
+            <chinese>有</chinese>
+            <pinyin>yǒu</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>time</english>
+            <chinese>时间</chinese>
+            <pinyin>shíjiān</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to say, to speak</english>
+            <chinese>说</chinese>
+            <pinyin>shuō</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(for action) a time</english>
+            <chinese>遍</chinese>
+            <pinyin>biàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to play ball</english>
+            <chinese>打球</chinese>
+            <pinyin>dǎ qiú</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to play</english>
+            <chinese>打</chinese>
+            <pinyin>dǎ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>ball</english>
+            <chinese>球</chinese>
+            <pinyin>qiú</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>sorry</english>
+            <chinese>抱歉</chinese>
+            <pinyin>bàoqiàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>afraid that...</english>
+            <chinese>恐怕</chinese>
+            <pinyin>kǒngpà</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to be OK</english>
+            <chinese>行</chinese>
+            <pinyin>xíng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>you (pl.)</english>
+            <chinese>你们</chinese>
+            <pinyin>nǐmen</pinyin>
+        </flashcard>
+    </set>
+        <set name="Lesson 7" title="Do you know him?">
+        <flashcard>
+            <english>to start school</english>
+            <chinese>开学</chinese>
+            <pinyin>kāixué</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to open, to start</english>
+            <chinese>开</chinese>
+            <pinyin>kāi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to watch, to look at</english>
+            <chinese>看</chinese>
+            <pinyin>kàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(quick, random, informal action)</english>
+            <chinese>一下</chinese>
+            <pinyin>yíxià</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>calling card</english>
+            <chinese>名片</chinese>
+            <pinyin>míngpiàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>ah, oh</english>
+            <chinese>啊</chinese>
+            <pinyin>à</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>professor</english>
+            <chinese>教授</chinese>
+            <pinyin>jiàoshòu</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to teach</english>
+            <chinese>教</chinese>
+            <pinyin>jiāo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Dīng Lìbō</english>
+            <chinese>丁力波</chinese>
+            <pinyin>Dīng Lìbō</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Zhāng</english>
+            <chinese>张</chinese>
+            <pinyin>Zhāng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to introduce</english>
+            <chinese>介绍</chinese>
+            <pinyin>jièshào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>name</english>
+            <chinese>名字</chinese>
+            <pinyin>míngzi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Chinese</english>
+            <chinese>中文</chinese>
+            <pinyin>Zhōngwén</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>major, specialty</english>
+            <chinese>专业</chinese>
+            <pinyin>zhuānyè</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>fine arts</english>
+            <chinese>美术</chinese>
+            <pinyin>měishù</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>beautiful</english>
+            <chinese>美</chinese>
+            <pinyin>měi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>literature</english>
+            <chinese>文学</chinese>
+            <pinyin>wénxué</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>faculty, department</english>
+            <chinese>系</chinese>
+            <pinyin>xì</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>physics</english>
+            <chinese>物理</chinese>
+            <pinyin>wùlǐ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>chemistry</english>
+            <chinese>化学</chinese>
+            <pinyin>huàxué</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>mathematics</english>
+            <chinese>数学</chinese>
+            <pinyin>shùxué</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>music</english>
+            <chinese>音乐</chinese>
+            <pinyin>yīnyuè</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>history</english>
+            <chinese>历史</chinese>
+            <pinyin>lìshǐ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>philosophy</english>
+            <chinese>哲学</chinese>
+            <pinyin>zhéxué</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>economics</english>
+            <chinese>经济</chinese>
+            <pinyin>jīngjì</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>education</english>
+            <chinese>教育</chinese>
+            <pinyin>jiàoyù</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to take an elective course</english>
+            <chinese>选修</chinese>
+            <pinyin>xuǎnxiū</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>culture</english>
+            <chinese>文化</chinese>
+            <pinyin>wénhuà</pinyin>
+        </flashcard>
+    </set>
+    <set name="Lesson 8" title="How many people are there in your family?">
+        <flashcard>
+            <english>family, home</english>
+            <chinese>家</chinese>
+            <pinyin>jiā</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>how many, how much</english>
+            <chinese>几</chinese>
+            <pinyin>jǐ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(measure for people in a family)</english>
+            <chinese>口</chinese>
+            <pinyin>kǒu</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>picture, photo</english>
+            <chinese>照片</chinese>
+            <pinyin>zhàopiàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>and</english>
+            <chinese>和</chinese>
+            <pinyin>hé</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(general-use measure word)</english>
+            <chinese>个</chinese>
+            <pinyin>gè</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>older sister</english>
+            <chinese>姐姐</chinese>
+            <pinyin>jiějie</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>two</english>
+            <chinese>两</chinese>
+            <pinyin>liǎng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>altogether</english>
+            <chinese>一共</chinese>
+            <pinyin>yígòng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>in addition</english>
+            <chinese>还</chinese>
+            <pinyin>hái</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>younger sister</english>
+            <chinese>妹妹</chinese>
+            <pinyin>mèimei</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>little, small</english>
+            <chinese>小</chinese>
+            <pinyin>xiǎo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>dog</english>
+            <chinese>狗</chinese>
+            <pinyin>gǒu</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>of course</english>
+            <chinese>当然</chinese>
+            <pinyin>dāngrán</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>real/really</english>
+            <chinese>真</chinese>
+            <pinyin>zhēn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>lovely, cute</english>
+            <chinese>可爱</chinese>
+            <pinyin>kě'ài</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>love</english>
+            <chinese>爱</chinese>
+            <pinyin>ài</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>not</english>
+            <chinese>没</chinese>
+            <pinyin>méi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>do, make</english>
+            <chinese>做</chinese>
+            <pinyin>zuò</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to work</english>
+            <chinese>工作</chinese>
+            <pinyin>gōngzuò</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Bèibei</english>
+            <chinese>贝贝</chinese>
+            <pinyin>Bèibei</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>big, large</english>
+            <chinese>大</chinese>
+            <pinyin>dà</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>how many, how much</english>
+            <chinese>多少</chinese>
+            <pinyin>duōshao</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>many, much</english>
+            <chinese>多</chinese>
+            <pinyin>duō</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>few, less</english>
+            <chinese>少</chinese>
+            <pinyin>shǎo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>like, prefer</english>
+            <chinese>喜欢</chinese>
+            <pinyin>xǐhuan</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>outside</english>
+            <chinese>外</chinese>
+            <pinyin>wài</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>language</english>
+            <chinese>语</chinese>
+            <pinyin>yǔ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>foreign country</english>
+            <chinese>外国</chinese>
+            <pinyin>wàiguó</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>hundred</english>
+            <chinese>百</chinese>
+            <pinyin>bǎi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(polite measure for people)</english>
+            <chinese>位</chinese>
+            <pinyin>wèi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>car, vehicle</english>
+            <chinese>车</chinese>
+            <pinyin>chē</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>computer</english>
+            <chinese>电脑</chinese>
+            <pinyin>diànnǎo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>dictionary</english>
+            <chinese>词典</chinese>
+            <pinyin>cídiǎn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>child</english>
+            <chinese>孩子</chinese>
+            <pinyin>háizi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>teaching assistant</english>
+            <chinese>助教</chinese>
+            <pinyin>zhùjiào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>department chairman</english>
+            <chinese>系主任</chinese>
+            <pinyin>xìzhǔrèn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>lawyer</english>
+            <chinese>律师</chinese>
+            <pinyin>lǜshī</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>engineer</english>
+            <chinese>工程师</chinese>
+            <pinyin>gōngchéngshī</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>paternal grandfather</english>
+            <chinese>爷爷</chinese>
+            <pinyin>yéye</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>maternal grandfather</english>
+            <chinese>外公</chinese>
+            <pinyin>wàigōng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>ago</english>
+            <chinese>前</chinese>
+            <pinyin>qián</pinyin>
+        </flashcard>
+    </set>
+    <set name="Lesson 9" title="He is 20 years old this year.">
+        <flashcard>
+            <english>this year</english>
+            <chinese>今年</chinese>
+            <pinyin>jīnnián </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>year</english>
+            <chinese>年</chinese>
+            <pinyin>nián </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>years old </english>
+            <chinese>岁</chinese>
+            <pinyin>suì </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>class, lesson</english>
+            <chinese>课</chinese>
+            <pinyin>kè </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>week</english>
+            <chinese>星期</chinese>
+            <pinyin>xīngqī </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>morning</english>
+            <chinese>上午</chinese>
+            <pinyin>shàngwǔ </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>above, last</english>
+            <chinese>上</chinese>
+            <pinyin>shàng </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>afternoon</english>
+            <chinese>下午</chinese>
+            <pinyin>xiàwǔ </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>below, next</english>
+            <chinese>下</chinese>
+            <pinyin>xià </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Sunday</english>
+            <chinese>星期日</chinese>
+            <pinyin>xīngqīrì </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>birthday</english>
+            <chinese>生日</chinese>
+            <pinyin>shēngrì </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>be born</english>
+            <chinese>生</chinese>
+            <pinyin>shēng </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>how old</english>
+            <chinese>多大</chinese>
+            <pinyin>duō dà </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>how (many/much)</english>
+            <chinese>多</chinese>
+            <pinyin>duō </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>big</english>
+            <chinese>大</chinese>
+            <pinyin>dà </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>be born</english>
+            <chinese>出生</chinese>
+            <pinyin>chūshēng </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>go out, come out</english>
+            <chinese>出</chinese>
+            <pinyin>chū </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>be born in the year of...</english>
+            <chinese>属</chinese>
+            <pinyin>shǔ </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>get-together, party</english>
+            <chinese>聚会</chinese>
+            <pinyin>jùhuì </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>meeting</english>
+            <chinese>会</chinese>
+            <pinyin>huì </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>congratulate</english>
+            <chinese>祝贺</chinese>
+            <pinyin>zhùhè </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>wish</english>
+            <chinese>祝</chinese>
+            <pinyin>zhù </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>participate, attend</english>
+            <chinese>参加</chinese>
+            <pinyin>cānjiā </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to spend, celebrate</english>
+            <chinese>过</chinese>
+            <pinyin>guò</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>eat</english>
+            <chinese>吃</chinese>
+            <pinyin>chī </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>cake</english>
+            <chinese>蛋糕</chinese>
+            <pinyin>dàngāo </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>egg</english>
+            <chinese>蛋</chinese>
+            <pinyin>dàn </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>cake</english>
+            <chinese>糕</chinese>
+            <pinyin>gāo </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>buy</english>
+            <chinese>买</chinese>
+            <pinyin>mǎi </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>bottle</english>
+            <chinese>瓶</chinese>
+            <pinyin>píng </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>red wine</english>
+            <chinese>红葡萄酒</chinese>
+            <pinyin>hóngpútaojiǔ </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>red</english>
+            <chinese>红</chinese>
+            <pinyin>hóng </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>grape</english>
+            <chinese>葡萄</chinese>
+            <pinyin>pútao </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>wine, liquor</english>
+            <chinese>酒</chinese>
+            <pinyin>jiǔ </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Beijing</english>
+            <chinese>北京</chinese>
+            <pinyin>Běijīng </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>happy</english>
+            <chinese>快乐</chinese>
+            <pinyin>kuàilè </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>beautiful, nice</english>
+            <chinese>漂亮</chinese>
+            <pinyin>piàoliang </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>roast duck</english>
+            <chinese>烤鸭</chinese>
+            <pinyin>kǎoyā </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>duck</english>
+            <chinese>鸭</chinese>
+            <pinyin>yā </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>birthday noodles</english>
+            <chinese>寿面</chinese>
+            <pinyin>shòumiàn </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>noodles</english>
+            <chinese>面</chinese>
+            <pinyin>miàn </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Coke</english>
+            <chinese>可乐</chinese>
+            <pinyin>kělè </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Sprite</english>
+            <chinese>雪碧</chinese>
+            <pinyin>Xuěbì </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>beer</english>
+            <chinese>啤酒</chinese>
+            <pinyin>píjiǔ </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>milk</english>
+            <chinese>牛奶</chinese>
+            <pinyin>niúnǎi </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>hamburger</english>
+            <chinese>汉堡</chinese>
+            <pinyin>hànbǎo </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>hotdog</english>
+            <chinese>热狗</chinese>
+            <pinyin>règǒu </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>bread</english>
+            <chinese>面包</chinese>
+            <pinyin>miànbāo </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Chinese food</english>
+            <chinese>中餐</chinese>
+            <pinyin>zhōngcān </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Western food</english>
+            <chinese>西餐</chinese>
+            <pinyin>xīcān </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>tea</english>
+            <chinese>茶</chinese>
+            <pinyin>chá </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>cooked rice</english>
+            <chinese>米饭</chinese>
+            <pinyin>mǐfàn </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>daughter</english>
+            <chinese>女儿</chinese>
+            <pinyin>nǚ‘ér</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>son</english>
+            <chinese>儿子</chinese>
+            <pinyin>érzi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>evening</english>
+            <chinese>晚上</chinese>
+            <pinyin>wǎnshang </pinyin>
+        </flashcard>
+        <flashcard>
+            <english>store or shop</english>
+            <chinese>店</chinese>
+            <pinyin>diàn</pinyin>
+        </flashcard>
+    </set>
+    <set name="Lesson 10" title="I am here to buy a CD.">
+        <flashcard>
+            <english>CD</english>
+            <chinese>光盘</chinese>
+            <pinyin>guāngpán</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>often</english>
+            <chinese>常常</chinese>
+            <pinyin>chángcháng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>with, to follow</english>
+            <chinese>跟</chinese>
+            <pinyin>gēn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>market, shopping mall</english>
+            <chinese>商场</chinese>
+            <pinyin>shāngchǎng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>famous</english>
+            <chinese>有名</chinese>
+            <pinyin>yǒumíng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>book</english>
+            <chinese>书</chinese>
+            <pinyin>shū</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>newspaper</english>
+            <chinese>报纸</chinese>
+            <pinyin>bàozhǐ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>notebook</english>
+            <chinese>本子</chinese>
+            <pinyin>běnzi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>there</english>
+            <chinese>那儿</chinese>
+            <pinyin>nàr</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Liáng Zhù</english>
+            <chinese>梁祝</chinese>
+            <pinyin>Liáng Zhù</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>master</english>
+            <chinese>师傅</chinese>
+            <pinyin>shīfu</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>banana</english>
+            <chinese>香蕉</chinese>
+            <pinyin>xiāngjiāo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>apple</english>
+            <chinese>苹果</chinese>
+            <pinyin>píngguǒ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>how</english>
+            <chinese>怎么</chinese>
+            <pinyin>zěnme</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>easy</english>
+            <chinese>容易</chinese>
+            <pinyin>róngyì</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(measure 0.5kg)</english>
+            <chinese>斤</chinese>
+            <pinyin>jīn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>money</english>
+            <chinese>钱</chinese>
+            <pinyin>qián</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>yuan</english>
+            <chinese>快 (钱)</chinese>
+            <pinyin>kuài(qián)</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>1/10 yuan</english>
+            <chinese>毛 (钱)</chinese>
+            <pinyin>máo(qián)</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>1/100 yuan</english>
+            <chinese>分 (钱)</chinese>
+            <pinyin>fēn(qián)</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>precious</english>
+            <chinese>贵</chinese>
+            <pinyin>guì</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>give as a gift</english>
+            <chinese>送</chinese>
+            <pinyin>sòng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>give, for</english>
+            <chinese>给</chinese>
+            <pinyin>gěi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>give change</english>
+            <chinese>找(钱)</chinese>
+            <pinyin>zhǎo(qián)</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>salesclerk</english>
+            <chinese>售货员</chinese>
+            <pinyin>shòuhuòyuán</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>writer</english>
+            <chinese>作家</chinese>
+            <pinyin>zuòjiā</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>bookstore</english>
+            <chinese>书店</chinese>
+            <pinyin>shūdiàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>gym</english>
+            <chinese>体育馆</chinese>
+            <pinyin>tǐyùguǎn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>park</english>
+            <chinese>公园</chinese>
+            <pinyin>gōngyuán</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>cheap</english>
+            <chinese>便宜</chinese>
+            <pinyin>piányi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(books measure)</english>
+            <chinese>本</chinese>
+            <pinyin>běn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(stick-like measure)</english>
+            <chinese>支</chinese>
+            <pinyin>zhī</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>pen</english>
+            <chinese>笔</chinese>
+            <pinyin>bǐ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(newspapers measure)</english>
+            <chinese>份</chinese>
+            <pinyin>fèn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>yuan</english>
+            <chinese>元</chinese>
+            <pinyin>yuán</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>sell</english>
+            <chinese>卖</chinese>
+            <pinyin>mài</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(cups measure)</english>
+            <chinese>杯</chinese>
+            <pinyin>bēi</pinyin>
+        </flashcard>
+    </set>
+    <set name="Lesson 11" title="I can speak a little Chinese.">
+        <flashcard>
+            <english>to know how to, can</english>
+            <chinese>会</chinese>
+            <pinyin>huì</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>a little bit</english>
+            <chinese>(一)点儿</chinese>
+            <pinyin>(yī)diǎnr</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>driver</english>
+            <chinese>司机</chinese>
+            <pinyin>sījī</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>o'clock</english>
+            <chinese>点(钟)</chinese>
+            <pinyin>diǎn(zhōng)</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to be short of, lack</english>
+            <chinese>差</chinese>
+            <pinyin>chà</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>quarter (of an hour)</english>
+            <chinese>刻</chinese>
+            <pinyin>kè</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to return</english>
+            <chinese>回</chinese>
+            <pinyin>huí</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to go to class</english>
+            <chinese>上课</chinese>
+            <pinyin>shàngkè</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to ascend, to go to</english>
+            <chinese>上</chinese>
+            <pinyin>shàng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>can, be able to</english>
+            <chinese>能</chinese>
+            <pinyin>néng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to arrive</english>
+            <chinese>到</chinese>
+            <pinyin>dào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>no (modestly)</english>
+            <chinese>哪里</chinese>
+            <pinyin>nǎli</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to teach</english>
+            <chinese>教</chinese>
+            <pinyin>jiāo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>granddaughter (son side)</english>
+            <chinese>孙女儿</chinese>
+            <pinyin>sūnnür</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>daughter</english>
+            <chinese>女儿</chinese>
+            <pinyin>nǚ'ér</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>years (of age)</english>
+            <chinese>岁数</chinese>
+            <pinyin>suìshu</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>number</english>
+            <chinese>数</chinese>
+            <pinyin>shù</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>minute</english>
+            <chinese>分(种)</chinese>
+            <pinyin>fēn(zhōng)</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>bye-bye</english>
+            <chinese>拜拜</chinese>
+            <pinyin>báibái</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>why</english>
+            <chinese>为什么</chinese>
+            <pinyin>wèi shénme</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>for</english>
+            <chinese>为</chinese>
+            <pinyin>wèi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>things, stuff</english>
+            <chinese>东西</chinese>
+            <pinyin>dōngxi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to have fun</english>
+            <chinese>玩儿</chinese>
+            <pinyin>wánr</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>evening, night</english>
+            <chinese>晚上</chinese>
+            <pinyin>wǎnshang</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>late</english>
+            <chinese>晚</chinese>
+            <pinyin>wǎn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>half</english>
+            <chinese>半</chinese>
+            <pinyin>bàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to write</english>
+            <chinese>写</chinese>
+            <pinyin>xiě</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>Chinese character</english>
+            <chinese>汉字</chinese>
+            <pinyin>Hànzì</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>character</english>
+            <chinese>字</chinese>
+            <pinyin>zì</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to sleep</english>
+            <chinese>睡觉</chinese>
+            <pinyin>shuìjiào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to sleep</english>
+            <chinese>睡</chinese>
+            <pinyin>shuì</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to get up</english>
+            <chinese>起床</chinese>
+            <pinyin>qǐchuáng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to get up, to rise</english>
+            <chinese>起</chinese>
+            <pinyin>qǐ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>bed</english>
+            <chinese>床</chinese>
+            <pinyin>chuáng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>should, ought to</english>
+            <chinese>应该</chinese>
+            <pinyin>yīnggāi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>should, ought to</english>
+            <chinese>该</chinese>
+            <pinyin>gāi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>question</english>
+            <chinese>问题</chinese>
+            <pinyin>wèntí</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to finish class</english>
+            <chinese>下课</chinese>
+            <pinyin>xiàkè</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to eat (a meal)</english>
+            <chinese>吃饭</chinese>
+            <pinyin>chīfàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to drive a car</english>
+            <chinese>开车</chinese>
+            <pinyin>kāichē</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>vehicle</english>
+            <chinese>车</chinese>
+            <pinyin>chē</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to dance</english>
+            <chinese>跳舞</chinese>
+            <pinyin>tiàowǔ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to sing (a song)</english>
+            <chinese>唱歌</chinese>
+            <pinyin>chànggē</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to answer</english>
+            <chinese>回答</chinese>
+            <pinyin>huídá</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>gift, present</english>
+            <chinese>礼物</chinese>
+            <pinyin>lǐwù</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>watch</english>
+            <chinese>表</chinese>
+            <pinyin>biǎo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>fast</english>
+            <chinese>快</chinese>
+            <pinyin>kuài</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to wait</english>
+            <chinese>等</chinese>
+            <pinyin>děng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to smoke</english>
+            <chinese>吸烟</chinese>
+            <pinyin>xīyān</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>difficult</english>
+            <chinese>难</chinese>
+            <pinyin>nán</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to take pictures</english>
+            <chinese>拍照</chinese>
+            <pinyin>pāizhào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>note</english>
+            <chinese>便条</chinese>
+            <pinyin>biàn tiá</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to hail a taxi</english>
+            <chinese>打的</chinese>
+            <pinyin>dǎdí</pinyin>
+        </flashcard>
+    </set>
+    <set name="Lesson 12" title="I am not feeling wall at all.">
+        <flashcard>
+            <english>whole body</english>
+            <chinese>全身</chinese>
+            <pinyin>quánshēn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>whole</english>
+            <chinese>全</chinese>
+            <pinyin>quán</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>body</english>
+            <chinese>身</chinese>
+            <pinyin>shēn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>comfortable</english>
+            <chinese>舒服</chinese>
+            <pinyin>shūfu</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>every</english>
+            <chinese>每</chinese>
+            <pinyin>měi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to have physical training</english>
+            <chinese>锻炼</chinese>
+            <pinyin>duànliàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>head</english>
+            <chinese>头</chinese>
+            <pinyin>tóu</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>painful, sore</english>
+            <chinese>疼</chinese>
+            <pinyin>téng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>throat</english>
+            <chinese>嗓子</chinese>
+            <pinyin>sǎngzi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to think, to want</english>
+            <chinese>想</chinese>
+            <pinyin>xiǎng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>hospital</english>
+            <chinese>医院</chinese>
+            <pinyin>yīyuàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english></english>
+            <chinese>看病 =kànbìng</chinese>
+            <pinyin>to see a doctor</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>illness, to get sick</english>
+            <chinese>病</chinese>
+            <pinyin>bìng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>body, health</english>
+            <chinese>身体</chinese>
+            <pinyin>shēntǐ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>(modal particle)</english>
+            <chinese>吧</chinese>
+            <pinyin>ba</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>or</english>
+            <chinese>还是</chinese>
+            <pinyin>háishi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>together</english>
+            <chinese>一起</chinese>
+            <pinyin>yìqǐ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>cold</english>
+            <chinese>冷</chinese>
+            <pinyin>lěng</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to wear</english>
+            <chinese>穿</chinese>
+            <pinyin>chuān</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>clothes</english>
+            <chinese>衣服</chinese>
+            <pinyin>yīfu</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to take a rest</english>
+            <chinese>休息</chinese>
+            <pinyin>xiūxi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to, for</english>
+            <chinese>给</chinese>
+            <pinyin>gěi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to register at a hospital</english>
+            <chinese>挂号</chinese>
+            <pinyin>guàhào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>somewhat, a bit</english>
+            <chinese>有点儿</chinese>
+            <pinyin>yǒudiǎnr</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to become inflamed</english>
+            <chinese>发炎</chinese>
+            <pinyin>fāyán</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to have a fever</english>
+            <chinese>发烧</chinese>
+            <pinyin>fāshāo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to burn</english>
+            <chinese>烧</chinese>
+            <pinyin>shāo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to have a cold</english>
+            <chinese>感冒</chinese>
+            <pinyin>gǎnmào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to be in a hispital, to be hospitalized</english>
+            <chinese>住院</chinese>
+            <pinyin>zhùyuàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>water</english>
+            <chinese>水</chinese>
+            <pinyin>shuǐ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>medicine</english>
+            <chinese>药</chinese>
+            <pinyin>yào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to be willing, to be ready</english>
+            <chinese>愿意</chinese>
+            <pinyin>yuànyì</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>traditional chinese medicine</english>
+            <chinese>中药</chinese>
+            <pinyin>zhōngyào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>western medicine</english>
+            <chinese>西药</chinese>
+            <pinyin>xīyào</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>west</english>
+            <chinese>西</chinese>
+            <pinyin>xī</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>english</english>
+            <chinese>英文</chinese>
+            <pinyin>yīngwén</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to have an operation</english>
+            <chinese>开刀</chinese>
+            <pinyin>kāidāo</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to have a medical test</english>
+            <chinese>化验</chinese>
+            <pinyin>huàyàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>blood</english>
+            <chinese>血</chinese>
+            <pinyin>xiě</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>stool, shit</english>
+            <chinese>大便</chinese>
+            <pinyin>dàbiàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>urine</english>
+            <chinese>小便</chinese>
+            <pinyin>xiǎobiàn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>tooth</english>
+            <chinese>牙</chinese>
+            <pinyin>yá</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>abdomen, stomach</english>
+            <chinese>肚子</chinese>
+            <pinyin>dùzi</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>life</english>
+            <chinese>生活</chinese>
+            <pinyin>Shēnghuó</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>noon</english>
+            <chinese>中午</chinese>
+            <pinyin>Zhōngwǔ</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>to have an injection</english>
+            <chinese>打针</chinese>
+            <pinyin>Dǎzhēn</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>taiji boxing</english>
+            <chinese>太极拳</chinese>
+            <pinyin>Tàijíquán</pinyin>
+        </flashcard>
+        <flashcard>
+            <english>written request for leave</english>
+            <chinese>请假条</chinese>
+            <pinyin>Qǐngjiàtiáo</pinyin>
         </flashcard>
     </set>
 </database>
